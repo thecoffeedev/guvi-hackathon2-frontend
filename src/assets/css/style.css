@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #2C2A29;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#logo{
+  position: absolute;
+}
+
+#title{
+  margin-left: 80px;
+}
+
+#nav-panel{
+  filter: grayscale(70%);
+}
+
+.top-cont{
+  background: url(../images/vc.jpg);
+  /* background-repeat: no-repeat; */
+  background-position: left;
+  /* background-attachment: fixed; */
+  /* background-size: 1400px; */
+  min-height: 680px;
+}
+
+.products-cont{
+  background-color: #2C2A29;
+  height: 680px;
+}
+
+.c-images{
+  border-radius: 20px;
+
+  /* width: 600px;
+  height: 400px; */
+}
+
+.profile img {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%
+}
+
+.test-cont{
+  background: url(../images/white.jpg);
+  background-attachment: fixed;
+}
+
+.prod-cont{
+  /* height: 500px; */
+  background: url(../images/thor.jpg);
+   /* background-repeat: no-repeat; */
+   background-position: right;
+  background-attachment: fixed;
+
+  /* background-color: #2C2A29; */
+  color: white;
+  text-align: center;
+  border-bottom: solid 5px white;
+}
+
+.prs{
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+}
+
+.footer-cont{
+  background-color:#142752;
+  color: white;
+}
+
+.links{
+  text-decoration: none;
+  color: white;
+}
+
+.links:hover{
+  text-decoration: none;
+
+  color: grey;
+}
+
+.sm-links{
+  text-decoration: none;
+  color: grey;
+}
+
+.sm-links:hover{
+  text-decoration: none;
+}
+
+#cart-count{
+  position: relative;
+  bottom: 40px;
+  left: 25px;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  width: fit-content;
+  padding: 6px;
+  line-height: 50%;
+  border-radius: 30%;
+}
+
+#cart-img {
+  -webkit-filter: invert(1);
+  filter: invert(1);
+  }
