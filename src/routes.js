@@ -1,6 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import App from './App'
+import Home from './home'
 import Contact from './contact'
 import About from './about'
 import Cart from './cart'
@@ -13,7 +13,7 @@ const Routes = (props) => {
             <Switch>
                 <Route exact path='/' render = {(props) => {
                     return(
-                        <App />
+                        <Home />
                     )  
                 }} />
                 <Route exact path='/products' render = {(props) => {

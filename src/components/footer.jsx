@@ -1,10 +1,9 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { Form, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import {LoginContext} from '../App'
+import { LoginContext } from "../App";
 
 const Footer = () => {
-
   const [, setModalShow] = useContext(LoginContext);
 
   return (
@@ -30,7 +29,9 @@ const Footer = () => {
               />
             </Col>
             <Col sm={2} className="my-1">
-              <Button variant="primary" type="submit">Submit</Button>
+              <Button variant="primary" type="submit">
+                Submit
+              </Button>
             </Col>
           </Form.Row>
         </Form>
@@ -51,7 +52,7 @@ const Footer = () => {
             </Link>
             <br />
             <br />
-            <Link to='' className="links" onClick={() => setModalShow(true)}>
+            <Link to="" className="links" onClick={() => setModalShow(true)}>
               Login / Register
             </Link>
           </p>
@@ -61,23 +62,23 @@ const Footer = () => {
             <u>CONNECT</u>
           </h4>
           <p>
-            <a href="#fb" className="sm-links" target="_blank">
+            <a href="#fb" className="links" target="_blank">
               Facebook
             </a>
             <br />
             <br />
-            <a href="#twt" className="sm-links" target="_blank">
+            <a href="#twt" className="links" target="_blank">
               Twitter
             </a>
             <br />
             <br />
-            <a href="#lin" className="sm-links" target="_blank">
+            <a href="#lin" className="links" target="_blank">
               Linked In
             </a>
           </p>
         </div>
       </div>
-      <div className="col-12 text-center mt-3">
+      <div className="col-12 text-center mt-5">
         <h5>&#169; 2021 Equirent - Made in &#10084; with programming</h5>
       </div>
     </div>

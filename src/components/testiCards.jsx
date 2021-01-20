@@ -22,14 +22,16 @@ const TestiCards = () => {
             />{" "}
           </div>
           <Card.Text>
-            <q className="text-muted">
+            <span className="text-muted">
+              <span className="d-inline-block">&#10077;</span>
               <em>
                 <strong>
-                  This Company focuses on delivering quality services by
-                  providing the best renting services in the market
+                  &nbsp;This Company focuses on delivering quality services by
+                  providing the best renting services in the market&nbsp;
                 </strong>
               </em>
-            </q>
+              <span className="d-inline-block">&#10078;</span>
+            </span>
           </Card.Text>
           <div className="text-right mt-3">
             <h4 className="m-2">- Anderson</h4>
@@ -58,14 +60,16 @@ const TestiCards = () => {
             />{" "}
           </div>
           <Card.Text>
-            <q className="text-muted">
+            <span className="text-muted">
+              <span className="d-inline-block">&#10077;</span>
               <em>
                 <strong>
-                  Wonderful!!! amazing services. best rigs in the market with
-                  affordable prices. Definitely recommend to anyone
+                  &nbsp;Wonderful!!! amazing services. best rigs in the market
+                  with affordable prices. Definitely recommend to anyone&nbsp;
                 </strong>
               </em>
-            </q>
+              <span className="d-inline-block">&#10078;</span>
+            </span>
           </Card.Text>
           <div className="text-right mt-3">
             <h4 className="m-2">- Simon</h4>
@@ -94,14 +98,17 @@ const TestiCards = () => {
             />{" "}
           </div>
           <Card.Text>
-            <q className="text-muted">
+            <span className="text-muted">
+              <span className="d-inline-block">&#10077;</span>
               <em>
                 <strong>
-                  If you are a beginner and don't know what to do and where to
-                  buy new equipments? stick with this guys. Worth it
+                  &nbsp;If you are a beginner and don't know what to do and
+                  where to buy new equipments? stick with this guys. Worth
+                  it.&nbsp;
                 </strong>
               </em>
-            </q>
+              <span className="d-inline-block">&#10078;</span>
+            </span>
           </Card.Text>
           <div className="text-right mt-3">
             <h4 className="m-2">- Gary</h4>

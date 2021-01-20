@@ -1,8 +1,7 @@
-import React, {useContext} from "react";
-import {LoginContext} from '../App'
+import React, { useContext } from "react";
+import { LoginContext } from "../App";
 
 const PNC = () => {
-
   const [, setModalShow] = useContext(LoginContext);
 
   return (
@@ -57,7 +56,11 @@ const PNC = () => {
         </div>
       </div>
       <h4>Check more products and rent now</h4>
-      <button type="button" className="btn-lg btn-primary mt-3 mb-4" onClick={() => setModalShow(true)}>
+      <button
+        type="button"
+        className="btn-lg btn-primary mt-3 mb-4"
+        onClick={() => setModalShow(true)}
+      >
         Get Started
       </button>
     </div>

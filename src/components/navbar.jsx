@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { Navbar, Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import cart from "../assets/images/shopping-cart.png";
-import { LoginContext } from "../App";
-import { IsLoggedIn } from "../App";
+import { LoginContext, IsLoggedIn } from "../App";
 
-const NavCont = () => {
-  const [, setModalShow] = useContext(LoginContext);
+const NavCont = (props) => {
+  const [modalShow, setModalShow] = useContext(LoginContext);
   const [loggedIn, setLoggedIn] = useContext(IsLoggedIn);
 
   const logout = () => {
@@ -15,13 +15,7 @@ const NavCont = () => {
   };
 
   return (
-    <Navbar
-      id="nav-panel"
-      collapseOnSelect
-      expand="lg"
-      variant="dark"
-      className="text-center"
-    >
+    <Navbar id="nav-panel" collapseOnSelect expand="lg" variant="dark">
       <Navbar.Brand href="/">
         <img id="logo" src={logo} alt="logo" />
         <h1 id="title" className="d-inline-block">
@@ -31,28 +25,37 @@ const NavCont = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Link className="mr-5" href="/contact">
-            <h5>Contact Us</h5>
-          </Nav.Link>
-          <Nav.Link className="mr-5" eventKey={2} href="/about">
-            <h5>About Us</h5>
-          </Nav.Link>
-          <Nav.Link className="mr-5" eventKey={3} href="/products">
+          <Link className="mr-5 mt-4 nav-links" to="/">
+            <h5>Home</h5>
+          </Link>
+          <Link className="mr-5 mt-4 nav-links" to="/contact">
+            <h5>Contact</h5>
+          </Link>
+          <Link className="mr-5 mt-4 nav-links" to="/about">
+            <h5>About</h5>
+          </Link>
+          <Link className="mr-5 mt-4 nav-links" to="/products">
             <h5>Products</h5>
-          </Nav.Link>
+          </Link>
           {loggedIn ? (
-            <Nav.Link className="mr-5" onClick={logout}>
+            <Link to="" className="mr-5 mt-4 nav-links" onClick={logout}>
               <h5>Logout</h5>
-            </Nav.Link>
+            </Link>
           ) : (
-            <Nav.Link className="mr-5" onClick={() => setModalShow(true)}>
+            <Link
+              to=""
+              className="mr-5 mt-4 nav-links"
+              onClick={() => setModalShow(!modalShow)}
+            >
               <h5>Login</h5>
-            </Nav.Link>
+            </Link>
           )}
-          <Nav.Link className="mr-5 text-center" eventKey={2} href="/cart">
+          <Link className="mr-3 mt-3 nav-links" to="/cart">
             <img src={cart} alt="" id="cart-img" width="34px" />
-            <div id="cart-count">0</div>
-          </Nav.Link>
+            {props.cartItems ? (
+              <div id="cart-count">{props.cartItems}</div>
+            ) : null}
+          </Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
